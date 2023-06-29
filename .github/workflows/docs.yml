@@ -1,50 +1,46 @@
 name: docs
 
 on:
-  # 每当 push 到 main 分支时触发部署
+  # trigger deployment on every push to main branch
   push:
     branches: [master]
-  # 手动触发部署
+  # trigger deployment manually
   workflow_dispatch:
 
 jobs:
   docs:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [16.x]
+
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
         with:
+          # fetch all commits to get last updated time or other git log info
           fetch-depth: 0
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v2.2.2
         with:
-          # 选择要使用的 pnpm 版本
-          version: 8
-          # 使用 pnpm 安装依赖
-          run_install: true
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+          version: 7.17.0
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
         with:
-          # 选择要使用的 node 版本
-          node-version: 18
-          # 缓存 pnpm 依赖
-          cache: pnpm
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - run: pnpm i
 
-      # 运行构建脚本
+      # run build script
       - name: Build VuePress site
         run: pnpm run build
 
-      # 查看 workflow 的文档来获取更多信息
-      # @see https://github.com/crazy-max/ghaction-github-pages
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3
         with:
-          # 部署到 gh-pages 分支
+          # deploy to gh-pages branch
           target_branch: gh-pages
-          # 部署目录为 VuePress 的默认输出目录
-          build_dir: docs/.vuepress/dist
+          # deploy the default output dir of VuePress
+          build_dir: .vuepress/dist
         env:
-          # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
+          # @see https://docs.github.com/en/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
