@@ -3,13 +3,13 @@ import recoTheme from "vuepress-theme-reco";
 
 export default defineUserConfig({
   base: "/hanexplore/",
-  title: "vuepress-theme-reco",
-  description: "Just playing around",
+  title: "林寒的奇幻漂流",
+  description: "never stop learning, being powerful",
   theme: recoTheme({
     style: "@vuepress-reco/style-default",
-    logo: "/logo.png",
-    author: "reco_luan",
-    authorAvatar: "/head.png",
+    logo: "/logo-han.png",
+    author: "Han",
+    authorAvatar: "/author-avatar.jpg",
     docsRepo: "https://github.com/vuepress-reco/vuepress-theme-reco-next",
     docsBranch: "main",
     docsDir: "example",
@@ -29,15 +29,15 @@ export default defineUserConfig({
     },
     navbar: [
       { text: "Home", link: "/" },
-      { text: "Categories", link: "/categories/reco/1/" },
+      { text: "Categories", link: "/categories/JVM/1/" },
       { text: "Tags", link: "/tags/tag1/1/" },
-      {
-        text: "Docs",
-        children: [
-          { text: "vuepress-reco", link: "/docs/theme-reco/theme" },
-          { text: "vuepress-theme-reco", link: "/blogs/other/guide" },
-        ],
-      },
+      // {
+      //   text: "Docs",
+      //   children: [
+      //     { text: "vuepress-reco", link: "/docs/theme-reco/theme" },
+      //     { text: "vuepress-theme-reco", link: "/blogs/other/guide" },
+      //   ],
+      // },
     ],
     bulletin: {
       body: [
