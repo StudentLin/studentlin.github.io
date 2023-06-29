@@ -9,8 +9,9 @@
     "dev": "vuepress dev",
     "build": "vuepress build"
   },
-  "dependencies": {
+  "devDependencies": {
     "vuepress": "2.0.0-beta.62",
-    "vuepress-theme-reco": "2.0.0-beta.65"
+    "vuepress-theme-reco": "2.0.0-beta.65",
+    "vue": "^3.3.4"
   }
 }
