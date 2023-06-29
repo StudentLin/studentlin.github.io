@@ -3,6 +3,7 @@ import type { DefaultThemeOptions } from "vuepress";
 import recoTheme from "vuepress-theme-reco";
 
 export default defineUserConfig({
+  base: "/hanexplore/",
   title: "vuepress-theme-reco",
   description: "Just playing around",
   theme: recoTheme({
