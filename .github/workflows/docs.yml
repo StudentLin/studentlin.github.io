@@ -45,10 +45,9 @@ jobs:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Create CNAME file
-        uses: crazy-max/ghaction-github-pages@v3
+      - name: Add cname file in gh-pages branch
+        uses: EndBug/add-and-commit@v9
         with:
-          target_branch: gh-pages
-          build_dir: .github/cname
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          new_branch: gh-pages
+          add: '.github/cname'
+          message: 'add cname file'
