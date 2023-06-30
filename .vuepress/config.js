@@ -2,7 +2,6 @@ import { defineUserConfig } from "vuepress";
 import recoTheme from "vuepress-theme-reco";
 
 export default defineUserConfig({
-  base: "/hanexplore/",
   title: "林寒的奇幻漂流",
   description: "never stop learning, being powerful",
   theme: recoTheme({
