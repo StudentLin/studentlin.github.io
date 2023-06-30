@@ -50,5 +50,5 @@ jobs:
           git checkout -b gh-pages
           echo "xxxx" > CNAME
           git add -A
-          git commit -m "build:auto build and deploy"
-          git push
+          git commit -m "add cname"
+          git push origin gh-pages
