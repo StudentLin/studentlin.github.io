@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "vuepress dev",
-    "build": "vuepress build"
+    "build": "vuepress build",
+    "build:createCNAME": "vuepress build && sh add_cname.sh"
   },
   "devDependencies": {
     "vuepress": "2.0.0-beta.62",
