@@ -46,8 +46,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Add cname file in gh-pages branch
-        uses: EndBug/add-and-commit@v9
-        with:
-          new_branch: gh-pages
-          add: '.github/cname'
-          message: 'add cname file'
+        run: |-
+          git checkout -b gh-pages
+          echo "xxxx" > CNAME
+          git add -A
+          git commit -m "build:auto build and deploy"
+          git push
