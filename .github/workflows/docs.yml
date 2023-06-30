@@ -46,7 +46,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Add cname file in gh-pages branch
-        run: |-
+        run: |
           git checkout -b gh-pages
           echo "xxxx" > CNAME
           git add -A
