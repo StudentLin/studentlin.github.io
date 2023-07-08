@@ -1,0 +1,1 @@
+import{_ as e,o as t,c,a as o}from"./app-7de47f79.js";const _={},n=o("p",null,"3 page in category2",-1),s=[n];function a(r,l){return t(),c("div",null,s)}const d=e(_,[["render",a],["__file","121503.html.vue"]]);export{d as default};
