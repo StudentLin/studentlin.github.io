@@ -15,7 +15,7 @@ categories:
 
 ![img.png](img.png)
 
-当然不同的主题会有不同的效果，更多效果：https://ohmyposh.dev/docs/themes
+当然不同的主题会有不同的效果，[官网这里](https://ohmyposh.dev/docs/themes)查看更多效果
 下面让我来带大家手摸手进行配置吧！
 
 ### Windows Terminal
