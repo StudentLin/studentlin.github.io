@@ -11,8 +11,11 @@
     "build:createCNAME": "vuepress build && sh add_cname.sh"
   },
   "devDependencies": {
+    "vue": "^3.3.4",
     "vuepress": "2.0.0-beta.62",
-    "vuepress-theme-reco": "2.0.0-beta.65",
-    "vue": "^3.3.4"
+    "vuepress-theme-reco": "2.0.0-beta.65"
+  },
+  "dependencies": {
+    "vuepress-plugin-cursor-effects": "^1.1.6"
   }
 }

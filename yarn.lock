@@ -620,6 +620,27 @@
   "resolved" "https://registry.npmmirror.com/@mdit-vue/types/-/types-0.12.0.tgz"
   "version" "0.12.0"
 
+"@moefy-canvas/core@^0.5.2":
+  "integrity" "sha512-XkaVE91Tiwb35zFmI1DbrJpMh0xe54QbzQrc7ATwMos4C08dxBnwExwXEVS7oEct7owVDY1UWxtRRVE7smtzHw=="
+  "resolved" "https://registry.npmmirror.com/@moefy-canvas/core/-/core-0.5.2.tgz"
+  "version" "0.5.2"
+
+"@moefy-canvas/theme-popper@^0.5.2":
+  "integrity" "sha512-s6Gy27DKTLm2un5Od3fsAonnd7lN4pgyLXJ/omXisAZpVLbPg/Q5/QKpJLZvQ/08qNrn6X/GZjnWwvsHbJTBNw=="
+  "resolved" "https://registry.npmmirror.com/@moefy-canvas/theme-popper/-/theme-popper-0.5.2.tgz"
+  "version" "0.5.2"
+  dependencies:
+    "@moefy-canvas/core" "^0.5.2"
+    "@moefy-canvas/utils" "^0.5.2"
+    "ts-debounce" "^4.0.0"
+
+"@moefy-canvas/utils@^0.5.2":
+  "integrity" "sha512-DnI8I/cTBFfn3xoXwyyLEtye4pMI6zJFMxU1qps731xgYTWmzBqJPkZZd/2gfNnH5NnLUOGG7Ui3sMkmJ0vg0w=="
+  "resolved" "https://registry.npmmirror.com/@moefy-canvas/utils/-/utils-0.5.2.tgz"
+  "version" "0.5.2"
+  dependencies:
+    "@moefy-canvas/core" "^0.5.2"
+
 "@nodelib/fs.scandir@2.1.5":
   "integrity" "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="
   "resolved" "https://registry.npmmirror.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz"
@@ -4987,7 +5008,7 @@
   dependencies:
     "@vue/devtools-api" "^6.5.0"
 
-"vue@^3.0.0-0 || ^2.6.0", "vue@^3.2.0", "vue@^3.2.25", "vue@^3.2.45", "vue@^3.3.1", "vue@>=3.2.0", "vue@3.3.4":
+"vue@^3.0.0-0 || ^2.6.0", "vue@^3.2.0", "vue@^3.2.25", "vue@^3.2.45", "vue@^3.3.1", "vue@^3.3.4", "vue@>=3.2.0", "vue@3.3.4":
   "integrity" "sha512-VTyEYn3yvIeY1Py0WaYGZsXnz3y5UnGi62GjVEqvEGPl6nxbOrCXbVOTQWBEJUqAyTUk2uJ5JLVnYJ6ZzGbrSw=="
   "resolved" "https://registry.npmmirror.com/vue/-/vue-3.3.4.tgz"
   "version" "3.3.4"
@@ -4997,6 +5018,13 @@
     "@vue/runtime-dom" "3.3.4"
     "@vue/server-renderer" "3.3.4"
     "@vue/shared" "3.3.4"
+
+"vuepress-plugin-cursor-effects@^1.1.6":
+  "integrity" "sha512-4qXL2flMQcd6ecp+LhdChspobhdb9fkAfmRjRs2K3a/DiwtQtOE24jaVFCClwhfDpYuRe48a0KVeROYkdiWuXg=="
+  "resolved" "https://registry.npmmirror.com/vuepress-plugin-cursor-effects/-/vuepress-plugin-cursor-effects-1.1.6.tgz"
+  "version" "1.1.6"
+  dependencies:
+    "@moefy-canvas/theme-popper" "^0.5.2"
 
 "vuepress-theme-reco@2.0.0-beta.65":
   "integrity" "sha512-KkZeKpec+92ISQiL/8GwW8okbZGKge76jnp2g0bg4y9k+g1pm4xX1svazc8pxwvVevtsV0g2olBc2Y29ruvIMA=="
